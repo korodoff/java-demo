@@ -1,42 +1,42 @@
-// console.log(dsg); here declare a Error value is not define
-// let myHobbies; if value is not declared it will throw an error as undefine
-// console.log(myHobbies);
-// null: its a default value assign by a user to a variable as long as the variable has not ben assignned its original/update value
-let sName = null;
-console.log(sName); // o/p null
-// Global and Local Scope
-let fName = "krut";
-const lName = "Rose";
-var age = 29;
-// the above value are declared as global variable
-console.log(fName, lName, age);
-{
-    console.log(fName, lName, age);
-}
-// block scope
-{
-    let dName = "sutnga";
-    var qName = "rasut"
-    console.log(dName);
-}
-// console.log(dName); here value will be not define because we cannot access block scope variable
-// console.log(qName); //here value will show because var always behave as a global variable
-// Hoisting: it support only with var type data bit not with let and const
-// let and cont cannot be access before initialization like below
-// console.log(game);//refference Error:
-let game ="football"
-// var key word are hoister
-console.log(game2);
-var game2;
-game2 = "hockey";
-console.log("game2");
-// the above first we get an undefine value but onces the variable is declared we get the given value
-// hoisting in function
-add(2,3); //2,3 are called argument
-function add(a,b, c=10){ //a,b are parameter
-    let result = a*b;
-    console.log(result);
-    console.log(c);
-}
-// console.log(c); error: since c is not global
-//parameter are needed only when we want to manipulate argument
+// operators
+// arithematic operators: +,-,*,/,%
+console.log(2+3);
+console.log(2-3);
+console.log(2*3);
+console.log(2/3);
+console.log(2%3);
+// comparision operator: >,< <=,>=,==,===,
+console.log(2>3);
+console.log(2<3);
+console.log(2>=3);
+console.log(2<=3);
+console.log(2==3);
+console.log(2==2);
+console.log(2=="2");//check only value but not data types hence value true
+console.log(2===3);
+console.log(2===2);
+console.log(2==="2");//check both value and data types hence value false
+console.log("space")
+// logical operator: //,||,&&,!
+console.log(2!=3);
+console.log(2!==2);//value and data type checking
+console.log(4&&3);
+console.log(4&&0);
+console.log(0&&3);
+console.log(2||3);// pint value 2 since its the first value
+console.log(0||3);// pint value 3 since n should be greater than 0
+console.log(!0);//true
+console.log(!1);//false
+console.log(!2);//false
+// increment operator: ++,--
+let a = 2;
+a++;//increment a+a
+console.log(a);//value=3
+a--; //decrement a-a
+console.log(a);//value=2
+console.log(a++);//value=2 cause of post increment operator value will be effect in the next line
+console.log(a);//value=3 because of post increment above
+console.log(++a);//value=4 since the value is pre incremnted 
+let b = 3;
+b/=2;// this is similar to b=b/2
+b*=5;//this is similar to b=b*5
