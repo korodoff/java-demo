@@ -40,3 +40,20 @@ console.log(++a);//value=4 since the value is pre incremnted
 let b = 3;
 b/=2;// this is similar to b=b/2
 b*=5;//this is similar to b=b*5
+// bit operator
+console.log(1|2); // OR operator
+console.log(1&2); //AND operator
+console.log(1^2); //XOR operator
+console.log(4>>3);//shift from left to right 3 bit 
+console.log(1<<2);//shifter from right to left 1 bit
+// ternary operator
+// condition1:condition2
+// if the first condition is true then its executed else second condition will be excute
+let agee = 15;
+let resultt =
+    (agee >= 18) ? "You are eligible to vote." : "You are not eligible to vote yet";
+console.log(resultt);
+let x=2;
+let y=3;
+x>y ? x++:x--;
+console.log(x);
