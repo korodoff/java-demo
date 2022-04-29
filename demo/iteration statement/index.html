@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    1.const Find_Digits = (N) => 
+    {
+        return N.toString().length;
+    };
+    2.const Find_Five = (N) => 
+    {
+      let p, count = 0;
+         while(N!==0)
+         {
+           p=N%10;
+           N=parseInt(N/10);
+           if(p==5)
+           {
+             ++count;
+           }
+         }
+         return count++;
+    };
+    3.const findSum = (n) => {
+        var r=0;
+        for(let i=1; i<=n; i++){
+          if(i%2===0){
+            
+            r = r+i;
+          }
+        }return r;
+      };
+    4.const Number_Sum = (N) => 
+    {
+        var sum=0
+        while(N){
+          sum = sum +N%10;
+          N = Math.floor(N/10);
+        }return sum;
+    };
+    5.const Print_Odd = (N) => 
+    {
+         for(let i=2; i<=N; i++){
+            if(i==2){
+              console.log(i);
+            }else if(i%2!==0){
+              console.log(i);
+            }
+         }
+    };
+    6.const Print_pattern = (N) => 
+    {
+      var str =" ";
+      for(let i=1; i<=N; i++){
+        for(let j=1; j<=i; j++){
+          str+="*";
+        }
+        str+="\n";
+      }
+      console.log(str)
+    };
+    7.const Prime_Check = (N) => 
+    {
+      for (let i = 2; i < N; i++) {
+            if (N % i !== 0) {
+                return "YES";
+            }else{
+              return "NO";
+            }
+        }
+    
+        8.onst Print_pattern = (N) => 
+        {
+          var str =" ";
+          for(let i=1; i<=N; i++){
+            for(let j=1; j<=i; j++){
+              str+="*";
+            }
+            str+="\n";
+          }
+          console.log(str)
+        };
+        
+    };
+    9.const printNumbers = (n) => {
+        for(i=1; i<=n; i++){
+          console.log(i);
+        }
+    };
+    10.const Print_Table = (N) => 
+    {
+        for(let i=1; i<=10; i++){
+         let N4 =N+" * "+i+" = "+N*i;
+         console.log(N4);
+        }
+    };
+    
+    
+</body>
+</html>
