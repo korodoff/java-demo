@@ -70,3 +70,28 @@ console.log(num2);
 // slice: help to print from the given index to the value before the given index cause start index is inclusive and end index is exclusive i.e not included
 let num3 = [2,6,4,8,9,8,7,2];
 console.log(num3.slice(2,6))
+
+
+// math module
+// map,filter,reduce
+
+// map: return a new array
+// it never modify the original files
+// known as linear function
+let number123 = [1,2,3,4,5];
+console.log(number);
+number123.map((item)=>{console.log(item)})
+// filter
+let res = number123.filter((item)=>{
+    return item > 3;
+})
+console.log(res);
+
+// reduce
+// cur: here act as a for(let i of number)
+// acc: here is a variable
+let red = number123.reduce((acc,cur)=> acc += cur,0);// we dont need curl bracket because its a single statement
+console.log(red);
+
+let red1 = number123.reduce((acc,cur)=> acc = acc*cur,1);
+console.log(red1);
