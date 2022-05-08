@@ -8,38 +8,36 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>LISTS</H1>
+    <div class="list">
+
+      <h1>LISTS</H1>
         <h3>Ordered lists</h3>
-        <p>Numeric</p>
+        <p>fruit</p>
            <ol type="Numeric">
        
-               <li>Item 1</li>
-               <li>Item 2</li>
+               <li>Banana</li>
+               <li>Apple</li>
            </ol>
-           <p>Lowercase letters</p>
+           <p>Animal</p>
            <ol type="a">
-               <li>Item 1</li>
-               <li>Item 2</li>
+               <li>Python</li>
+               <li>Kola</li>
            </ol>
            <h3>UnOrdered lists</h3>
-    <p>Default</p>
+    <p>artist</p>
     <ul type="default">
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+        <li>dada life</li>
+        <li>Avicii</li>
+        <li>tristam</li>
     </ul>
-    <p>None</p>
+    <p>vehicle</p>
     <ul type="none">
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+        <li>Truck</li>
+        <li>car</li>
+        <li>Bike</li>
     </ul>
-    <p>Disc</p>
-    <ul type="disc">
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
+    </div>
+
     <form id="survey-form">
         <div class="form-group">
           <label id="name-label" for="name">Name</label>
@@ -76,7 +74,65 @@
             class="form-control"
             placeholder="Age"
           />
-        </div>
+          </div>
+          <div class="form-group">
+            <label for="Man"></label>
+            <input type="radio" name="Man" id="Man" value="Man" required><span>Man</span>
+            <label for="Women"></label>
+            <input type="radio" name="Women" id="Women" value="Women" required><span>Women</span>
+          </div>
+          <div class="form-group">
+            <label for="Platform">Platform</label>
+            <select name="Platform" id="Platform">
+              <option value="none">select</option>
+              <option value="HTML">HTML</option>
+              <option value="NodeJS">NodeJs</option>
+              <option value="CSS">CSS</option>
+            </select>
+          </div>
+          <div class="css">
+          <p>
+            <pre>
+1.Inline CSS
+2.Internal or Embedded CSS
+3.External CSS
+
+
+<strong>Inline CSS:</strong> Inline CSS contains the CSS property in the body section attached with element is known as inline CSS. This kind of style is specified 
+within an HTML tag using the style attribute.
+
+
+<strong>Internal or Embedded CSS:</strong> This can be used when a single HTML document must be styled uniquely. The CSS rule set should be within the HTML file in the 
+head section i.e the CSS is embedded within the HTML file.  
+            
+<strong>External Css:</strong>External CSS contains separate CSS file which contains only style property with the help of tag attributes (For example class, id, heading, … etc).
+CSS property written in a separate file with .css extension and should be linked to the HTML document using link tag. 
+This means that for each element, style can be set only once and that will be applied across web pages.
+            </pre>
+          </p>
+          </div>
+          <div class="margin">Margin</div>
+          <div class="margin">Margin</div>
+          <div class="padding">padding</div>
+          <div class="flex">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+            <div class="box">box4</div>
+            <div class="box">box5</div>
+            <div class="box">box6</div>
+            <div class="box">box7</div>
+            <div class="box">box8</div>
+            <div class="box">box9</div>
+            <div class="box">box10</div>
+          </div>
+          <div class="grid">
+            <div class="i1">box1</div>
+            <div class="i2">box2</div>
+            <div class="i3">box3</div>
+            <div class="i4">box4</div>
+            <div class="i5">box5</div> 
+          </div>
            
 </body>
 </html>
