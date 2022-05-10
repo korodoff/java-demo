@@ -47,9 +47,9 @@ console.log(apple);
 console.log(vivo);
 console.log(vivo.brand);
 
-console.log(object.keys(apple));
-console.log(object.values(apple));
-for(const{key,value} of object.entries(apple)){
+console.log(Object.keys(apple));
+console.log(Object.values(apple));
+for(const{key,value} of Object.entries(apple)){
     console.log(key,value);
 }
 // rhis keyword ---
@@ -67,3 +67,21 @@ let arr2 = [1,23,4];
 console.log(arr1.concat(arr2));
 let arr3 = [...arr1,...arr2];
 console.log(arr3);
+
+//Create two students having properties as name, rollno, class, showDetails using Object Constructor.
+
+
+
+function Student(name,rollno,classes){
+    this.name = name;
+    this.rollno = rollno;
+    this.classes = classes;
+
+}
+let Student1 = new Student("thoi",29,10);
+let Student2 = new Student("Rulam",30,12);
+console.log(Student1);
+console.log(Object.keys(Student2))
+for(let entry of Object.entries(Student1)){
+    console.log(entry);
+}

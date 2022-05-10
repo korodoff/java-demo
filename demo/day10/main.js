@@ -86,6 +86,6 @@ for(let key of set1.keys()){
 for(let value of set1.values()){
     console.log(value);
 }
-for(let entry of set1.entries()){
+for(let entry of Student1.entries()){
     console.log(entry);
 }
