@@ -10,3 +10,28 @@
 .impMessage{
     color: brown;
 }
+.flexr{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.item{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.btt{
+    font-size: xx-small;
+}
+.image{
+    width: 100px;
+    height: 100px;
+    display: block;
+}
+.plain{
+    width: 100px;
+    height: 100px;
+    display: block;
+}
