@@ -109,8 +109,8 @@ employee1.showDetails.apply(employee3);
 
 
 
-let res1 = employee1.showDetails.bind(employee2);
+let res1 = employee1.showDetails.bind(employee2);//with bind we call the function and put it to a variable and then had to be called using variable
 let res2 = employee1.showDetails.bind(employee3);
-res1();//
+res1();// pass the argument with comma seperated  operator
 res2();//
 

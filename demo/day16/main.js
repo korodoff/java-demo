@@ -47,7 +47,7 @@ console.log(jay.__proto__.__proto__.__proto__.__proto__);
 
 const ticketBooking = function(){
     let passengerCount = 0;
-    return function(){
+   return function  (){
         passengerCount++;
         console.log(`the passenger count is ${passengerCount}`);
     };
@@ -58,3 +58,28 @@ bookie();
 bookie();
 bookie();
 console.dir(bookie);
+// in closure even tho the execution contexr is destroyed,the variable encironmrnt somehow keeps living 
+// somewhere in the engine
+
+
+// this is similar to that of the above
+let f;
+const g  = function(){
+    const a =3;
+    f = function(){
+    console.log(a+2);
+    }
+}
+g();
+f();
+console.dir(f);//here closure is between variable a
+const h = function(){
+    const b  = 4;
+    f = function(){
+        console.log(b+3);
+    }
+}
+h();
+f();
+console.dir(f);
+
