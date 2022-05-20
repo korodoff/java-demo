@@ -10,9 +10,9 @@
 
 var counter = counter();
 alert(counter());//OP: popop message " this messahe say 1"
-alert(counter());//OP: popop message " this messahe say 1"
-alert(counter());//OP: popop message " this messahe say 1"
-alert(counter());//OP: popop message " this messahe say 1"
+alert(counter());//OP: popop message " this messahe say 2"
+alert(counter());//OP: popop message " this messahe say 3"
+alert(counter());//OP: popop message " this messahe say 4"
 
 let count = 0;
 (function immediate() {
