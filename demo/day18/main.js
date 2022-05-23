@@ -13,3 +13,16 @@ $("#hide").click(function(){
     $(".learn1").toggle();
 });
 
+$("button").click(function(){
+    $.ajax({
+        url: "https://jsonplaceholder.typicode.com/todos/1",
+        type: "GET",
+        success: function(response){
+            console.log(response);
+            document.getElementById("learn").innerHTML = response.title;
+            document.getElementById("learn1").innerHTML = response.userId;
+        }
+    })
+})
+
+
