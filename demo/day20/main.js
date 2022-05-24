@@ -69,6 +69,8 @@ getEmployeID
      console.log("end of program")// this dosen't care if the condition it then or catch it will print or manipulat anyway(somthing that needed to add at the end)
  });
 
+
+ 
 // promise chaining eg and error also have to resolve them
 
 let promise = new Promise((resolve,reject)=>{
@@ -83,7 +85,7 @@ promise.then(()=>{// we can use .then multiple time
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
         
-            console.log("second call")
+            console.log("second call")// here we use Promise because we want the function to run synchronous
             resolve();
            },3000)
            
