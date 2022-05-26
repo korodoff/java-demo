@@ -1,0 +1,13 @@
+what are closures?
+Closures: When a fun is running , there is a another variable , we may access the local variable .........
+It is a combination of inner function and the lexical environment that was created by the inner function.
+We are able to access the variable inside the function becoz of closures.
+
+function outer(){
+  let a =10;
+  function inner() {
+     console.log(a);
+  }
+  inner();
+}
+outer();

@@ -1,0 +1,7 @@
+What is the use of setTimeout?
+setTimeout:  after certain time , it will return or print the result.
+clock, netbanking, irctc..
+setTimeout(callback, time-interval);
+setTimeout(()=>{
+   console.log("Hello");
+},2000);
