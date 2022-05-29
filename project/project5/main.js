@@ -8,6 +8,11 @@ const popButton = document.getElementById("pop_list")//popup btn
 const inputList = document.getElementById("input_list")
 
 const noteTrip = document.getElementById("note")// here to create all the trip note
+noteTrip.style.display = "flex"
+
+
+var noteSecond = document.getElementById("notesecond")
+noteSecond.style.display = "none"
 
 
 
@@ -23,6 +28,12 @@ cancelButton.addEventListener("click", toggleList);//cancel button in the addLis
 noteBox = [];// we use array to push the noteList name and fuction so that we can target the specific element to delete or add to that specific listBox
 
 addButton.addEventListener("click",()=>{
+    document.getElementById("singletaskvalue").style.display = "none"
+    noteSecond.style.display = "none";
+    noteTrip.style.display = "flex";
+    document.getElementById("task-back").innerText = "Task";
+    document.getElementById("lists").innerText = " List";
+    document.getElementById("list1").innerText = "Add List";
     toggleList();// toggle addList
     let userData = inputList.value;
 
@@ -39,11 +50,11 @@ addButton.addEventListener("click",()=>{
     createList();
 })
 function noteAddList(){
-    let ListTag = ""
+    var ListTag = ""
     noteBox.forEach((note) => {
         ListTag += `
         <div class="note-item" id="${note.id}">
-        <h4>${note.name}</h4>
+        <h4><span onclick = "displayone(${note.id})">${note.name}</span></h4>
         <div class="task-list">
         <ul class="items-container" id="${"id" +note.id}"></ul>
         </div>
@@ -65,6 +76,8 @@ function noteAddList(){
 
 
 function deleteList(id){
+    noteSecond.style.display = "none";
+    
     noteBox.forEach((note,index)=>{
         if(note.id ===id){
             noteBox.splice(index,1);
@@ -104,7 +117,7 @@ function newTask(id){
                 console.log(noteBox[index].subtask)
             }
         })
-        addItemValue.value = "";
+        // addItemValue.value = "";
         createList();
     }
 }
@@ -145,10 +158,57 @@ function newTask(id){
         })
     });
  }
+const singledisplay = document.getElementById("container2")
+const singledisplayvalue = document.getElementById("singletaskvalue")
+function togglecontainer(){
+    container.classList.toggle("containerActive")
+    singledisplay.classList.toggle("container2")
+}
 
 
 
+function displayone(id){
+    noteBox.forEach((note,index)=>{
+        noteSecond.style.display = "flex";
+        
+        noteTrip.style.display = "none";
+        // console.log(displayid)
+        // document
+        if(note.id ===id ){
+        //    document.getElementById("container2").style.visibility = "visible";
+        //    document.getElementById("container").style.visibility = "hidden";
+        document.getElementById("singletaskvalue").style.display = "inline"
+           document.getElementById("singletaskvalue").innerText = note.name
+           document.getElementById("task-back").innerText = "Back";
+           document.getElementById("lists").innerText = "";
+           document.getElementById("list1").innerText = "";
+        //    document.getElementById("singletaskdisplay").innerHTML =
+        // document.getElementById(note.id).innerText = "ya fux"
+        noteSecond.innerHTML = `
+        <div class="note-item" id="${note.id}">
+        <h4><span onclick = "displayone(${note.id})">${note.name}</span></h4>
+        <div class="task-list">
+        <ul class="items-container" id="${"id" +note.id}"></ul>
+        </div>
+        <div class="list-tools">
+        <span onclick="newTask(${note.id})">
+        <i class="fa-solid fa-circle-plus fa" aria-hidden="true"></i>
+        </span>
+        <span onclick="deleteList(${note.id})">
+        <i class="fa-solid fa-circle-minus fa" aria-hidden="true"></i>
+        </span>
+        </div>
+        </div>
+        `
 
+        }
+    });
+    noteAddList()
+}
+
+function displaysingle(){
+    
+}
 
 
 // function toggleList(){// toggle the addlist button in the navagation bar
