@@ -1,16 +1,28 @@
 //1.Difference b/n "==" and "===" operator
 //==--- it compare the value of 2 variables,not data type
-//===- it compares the value and data type of 2 variables
+//===- it compares the value and data type of the two varaible variables
+// it check the value and return weather the op is true or false
+// thisbelong to the comparosion operator
 
 console.log(2==2);//true
 console.log("Hi"==="Hi");//true
 
+// ******************************************************************************************
 //2.what is spread operator?
-//... allows us to expand an iterable like array into its individual elements
+// Spread syntax (...) allows an iterable such as an array expression or string to be expanded 
+// in places where zero or more arguments (for function calls) or elements (for array literals)
+//  are expected, or an object expression to be expanded in places where zero or more key-value 
+// pairs (for object literals) are expected.
 let Name =['A', 'L', 'T', 'H', 'A', 'F']
 let spread = [...Name]
 console.log(spread);
 
+
+//For function calls:
+
+//myFunction(...iterableObj); // pass all elements of iterableObj as arguments to function myFunction
+
+// ******************************************************************************************
 //3.Difference between var let and const
 // Var declaration are globally scoped or ftn scoped,while let and const are block scoped
 // Var variables can be updated & redeclared with in its scope
@@ -19,23 +31,63 @@ console.log(spread);
 // Var are hoisted
 // While var and let can be declared without being initialised,const must be initialized during declaration
 
+
+// ******************************************************************************************
+
+
+
 //4.What is execution context
-//In  the first stage "Memory Allocation",all the variables will get memory but will not the initialized means their value will not be given and it will be undefined,but function will get their value or definition at the time of memory allocation only.
-//In the second stage "Code Execution",variables will get assigned with their true values and functions will be executed
-//After completion of FEC,it will get deleted, and after if all executn completed GEC also get deleted
+
+// The Execution Context contains the code that's currently running, and everything that aids in its execution.
+
+///During the Execution Context
+//xt run-time, the specific code gets parsed by a parser, the variables and functions are stored in memory, 
+// executable byte-code gets generated, and the code gets executed.
+
+//There are two kinds of Execution Context in JavaScript:
+
+//Global Execution Context (GEC)
+//Function Execution Context (FEC)
+
+
+//Global Execution Context (GEC):
+//Whenever the JavaScript engine receives a script file, it first creates a default Execution Context known as the
+//  Global Execution Context (GEC).
+
+//The GEC is the base/default Execution Context where all JavaScript code that is not inside of a function gets 
+// executed.
+
+
+
+//Function Execution Context (FEC)
+//Whenever a function is called, the JavaScript engine creates a different type of Execution Context known
+//  as a Function Execution Context (FEC) within the GEC to evaluate and execute the code within that function.
+
+
+
+// ******************************************************************************************
+
 
 //5.What is meant by First class functions
 //Function which gets treated as a variable.It can be passed as an argument to other functions,can be returned by another function and can be assigned as a value to a variable.
 //Always we use arrow ftn
 
-const foo = function(p) {//HOF
-          console.log("Hello World");//Hello World
-          p()
+
+// Pass a function as an Argument
+JavaScript
+function sayHello() {
+  return "Hello, ";
 }
-function boo() {//FCF
-  console.log("iam krut");//iam AZHAR BUHAIS
+function greeting(helloMessage, name) {
+ console.log(helloMessage() + name);
 }
-foo(boo); 
+// Pass `sayHello` as an argument to `greeting` function
+greeting(sayHello, "JavaScript!");
+// Hello, JavaScript!
+
+
+// We are passing our sayHello() function as an argument to the greeting() function, this explains how we are
+//  treating the function as a value.
 
 
 //6.what are closures?
